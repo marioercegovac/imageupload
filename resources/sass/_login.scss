@@ -1,0 +1,82 @@
+
+#app.loginView {
+  height: 100%;
+  width: 100%;
+  background: #f5f7fb;
+  display: grid !important;
+  grid-template-columns: 25% 1fr 25%;
+  grid-template-rows: 250px 1fr 25%;
+  grid-template-areas: ". title ." ". login ." ". . .";
+
+  .title {
+    grid-area: title;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    @extend %flex-c-c;
+  }
+
+  .loginWrapper {
+    grid-area: login;
+    height: 80%;
+    width: 70%;
+    @extend %flex-c-c;
+    flex-direction: column;
+    background: white;
+    border: 1px solid rgba(0, 40, 100, 0.12);
+    margin: auto;
+
+    .input-icon {
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+
+    .isError {
+      font-size: 0.7rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+
+  #app.loginView {
+    justify-content: center;
+    grid-template-columns: 95%;
+    grid-template-areas: "title" "login" ".";
+
+    .title {
+      text-align: center;
+    }
+
+    .loginWrapper {
+      height: 250px;
+    }
+
+  }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
